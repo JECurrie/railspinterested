@@ -2,28 +2,23 @@ class PinsController < ApplicationController
   before_action :set_pin, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
   before_action :correct_user, only: [:edit, :update, :destroy]
-  # GET /pins
-  # GET /pins.json
+
+  respond_to :html
+
   def index
     @pins = Pin.all
   end
 
-  # GET /pins/1
-  # GET /pins/1.json
   def show
   end
 
-  # GET /pins/new
   def new
     @pin = current_user.pins.build
   end
 
-  # GET /pins/1/edit
   def edit
   end
 
-  # POST /pins
-  # POST /pins.json
   def create
     @pin = current_user.pins.build(pin_params)
     if @pin.save
