@@ -16,6 +16,7 @@ gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
 
 gem 'jquery-rails'
 gem 'devise', '~> 4.7', '>= 4.7.1'
+gem 'paperclip', '~> 6.1'
 
 group :development, :test do
 	gem 'sqlite3', '< 1.4'  #gem 'sqlite3',     '1.3.13'
